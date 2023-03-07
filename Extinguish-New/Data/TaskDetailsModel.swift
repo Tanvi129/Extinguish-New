@@ -19,6 +19,7 @@ struct Task {
     var distributorDetails : DistributorDetails
     var companyDetails : CompanyDetails
     var subtask : [Subtask]?
+    var proof : [String]?
     
     
 }
