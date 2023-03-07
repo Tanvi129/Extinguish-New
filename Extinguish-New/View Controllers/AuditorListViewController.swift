@@ -13,6 +13,8 @@ class AuditorListViewController: UIViewController , UITableViewDataSource , UITa
     var auditorList = DataModel().auditorList
   
 
+//    @IBOutlet var auditorPhoto: UIImageView!
+    
     
     @IBOutlet var auditorListTable: UITableView!
     
@@ -22,9 +24,11 @@ class AuditorListViewController: UIViewController , UITableViewDataSource , UITa
         super.viewDidLoad()
 //        configureTitleTabItems()
      
+      
+
         self.auditorListTable.dataSource = self
         self.auditorListTable.delegate = self
-        view.addSubview(floatingButton)
+//        view.addSubview(floatingButton)
 
         // Do any additional setup after loading the view.
     }
@@ -46,14 +50,29 @@ class AuditorListViewController: UIViewController , UITableViewDataSource , UITa
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = auditorListTable.dequeueReusableCell(withIdentifier: "auditorDetail", for: indexPath)
-        let cityCell = cell as? AuditorDetailTableViewCell
+        let cityCell = cell as? AuditorListTableViewCell
         let city = auditorList[indexPath.section]
+        
+        
+//        let selectedIndexPaths = auditorListTable.indexPathsForSelectedRows
+//        let rowIsSelected = selectedIndexPaths != nil && selectedIndexPaths!.contains(indexPath)
+//        cell.imageView?.image = auditorList[indexPath.row].AuditorPic
+        
+        
+        cityCell?.profilePic?.image = UIImage (named : city.profilPic)
+        cityCell?.profilePic?.layer.cornerRadius = (cityCell?.profilePic?.frame.size.width)! / 2
+        cityCell?.profilePic?.clipsToBounds = true
+        
+        cityCell?.profilePic?.layer.borderColor = UIColor.black.cgColor
+        cityCell?.profilePic?.layer.borderWidth = 1
         
         cell.backgroundColor = UIColor.white
         cell.layer.borderColor = UIColor.black.cgColor
+        
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8
         cell.clipsToBounds = true
+        
         cityCell?.auditorID?.text = "ID No - " + city.empID
         cityCell?.auditorName?.text = city.name
         
@@ -61,37 +80,49 @@ class AuditorListViewController: UIViewController , UITableViewDataSource , UITa
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0.01
+        return 0.10
         
     }
-    
-    private func configureTitleTabItems(){
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "figure.stand"), style: .done, target: self, action: nil)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "rectangle.portrait.and.arrow.right"), style: .done, target: self, action: nil)
-       
-        }
+   
+//    private func configureTitleTabItems(){
+//        navigationItem.leftBarButtonItem =
+//        UIBarButtonItem(
+//                        image: UIImage(systemName: "figure.stand"),
+//                        style: .done,
+//                        target: self,
+//                        action: nil)
+//
+//        navigationItem.rightBarButtonItem =
+//        UIBarButtonItem(
+//                        image: UIImage(
+//                        systemName: "rectangle.portrait.and.arrow.right"),
+//                        style: .done,
+//                        target: self,
+//                        action: nil)
+//
+//        }
   
 
-   
-    private let floatingButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
-//        button.layer.masksToBounds = true
-        button.layer.cornerRadius = 30
-        button.backgroundColor = UIColor(rgb: 0x0A2647)
-        let image = UIImage(systemName: "plus" , withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium))
-        button.setImage(image, for: .normal)
-        button.tintColor = .white
-        button.setTitleColor(.white, for: .normal)
-        button.layer.shadowRadius = 10
-        button.layer.shadowOpacity = 0.3
-        return button
-    }()
+//
+//    private let floatingButton: UIButton = {
+//        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+////        button.layer.masksToBounds = true
+//        button.layer.cornerRadius = 30
+//        button.backgroundColor = UIColor(rgb: 0x0A2647)
+//        let image = UIImage(systemName: "plus" , withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium))
+//        button.setImage(image, for: .normal)
+//        button.tintColor = .white
+//        button.setTitleColor(.white, for: .normal)
+//        button.layer.shadowRadius = 10
+//        button.layer.shadowOpacity = 0.3
+//        return button
+//    }()
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        floatingButton.frame = CGRect(x: view.frame.size.width - 70, y: view.frame.size.height - 150 , width: 60, height: 60 )
-        
-    }
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        floatingButton.frame = CGRect(x: view.frame.size.width - 70, y: view.frame.size.height - 150 , width: 60, height: 60 )
+//
+//    }
     
 
 }

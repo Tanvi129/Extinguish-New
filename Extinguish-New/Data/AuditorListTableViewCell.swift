@@ -9,11 +9,13 @@
 
 import UIKit
 
-class AuditorDetailTableViewCell: UITableViewCell {
+class AuditorListTableViewCell: UITableViewCell {
 
   
     
+    
     @IBOutlet var profilePic: UIImageView!
+    
     
     @IBOutlet var auditorID: UILabel!
     

@@ -8,7 +8,10 @@
 
 
 import Foundation
+import UIKit
+
 struct Auditor{
+    var profilPic : String
     var empID : String
     var name : String
     var phoneNumber : String
