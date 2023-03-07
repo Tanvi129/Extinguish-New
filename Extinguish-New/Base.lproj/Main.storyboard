@@ -353,13 +353,12 @@
     <resources>
         <image name="arrow.right" catalog="system" width="128" height="95"/>
         <image name="circle.inset.filled" catalog="system" width="128" height="123"/>
+        <image name="figure.stand" catalog="system" width="74" height="128"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <image name="note.text" catalog="system" width="128" height="107"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <image name="figure.stand" catalog="system" width="74" height="128"/>
-        <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
