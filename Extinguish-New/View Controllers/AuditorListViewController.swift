@@ -59,9 +59,10 @@ class AuditorListViewController: UIViewController , UITableViewDataSource , UITa
 //        cell.imageView?.image = auditorList[indexPath.row].AuditorPic
         
         
-        cityCell?.profilePic?.image = UIImage (named : city.profilPic)
+        cityCell?.profilePic?.image = UIImage (named : city.profilePic)
         cityCell?.profilePic?.layer.cornerRadius = (cityCell?.profilePic?.frame.size.width)! / 2
         cityCell?.profilePic?.clipsToBounds = true
+//        cityCell?.profilePic?.layer.masksToBounds = false
         
         cityCell?.profilePic?.layer.borderColor = UIColor.black.cgColor
         cityCell?.profilePic?.layer.borderWidth = 1
