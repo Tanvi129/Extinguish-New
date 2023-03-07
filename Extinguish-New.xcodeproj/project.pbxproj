@@ -15,6 +15,7 @@
 		2D0D621729B5EED400C6BF7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D0D621529B5EED400C6BF7A /* LaunchScreen.storyboard */; };
 		2D0D622029B5F1F800C6BF7A /* AuditorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D621F29B5F1F800C6BF7A /* AuditorListViewController.swift */; };
 		2D0D622629B5F36E00C6BF7A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D622529B5F36E00C6BF7A /* ProfileViewController.swift */; };
+		2D24CC0E29B6F95F00756C8A /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D24CC0D29B6F95F00756C8A /* TaskTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2D0D621829B5EED400C6BF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D0D621F29B5F1F800C6BF7A /* AuditorListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditorListViewController.swift; sourceTree = "<group>"; };
 		2D0D622529B5F36E00C6BF7A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2D24CC0D29B6F95F00756C8A /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		2D0D622329B5F27C00C6BF7A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2D24CC0D29B6F95F00756C8A /* TaskTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				2D0D620F29B5EED400C6BF7A /* TaskListViewController.swift in Sources */,
 				2D0D622029B5F1F800C6BF7A /* AuditorListViewController.swift in Sources */,
+				2D24CC0E29B6F95F00756C8A /* TaskTableViewCell.swift in Sources */,
 				2D0D622629B5F36E00C6BF7A /* ProfileViewController.swift in Sources */,
 				2D0D620B29B5EED400C6BF7A /* AppDelegate.swift in Sources */,
 				2D0D620D29B5EED400C6BF7A /* SceneDelegate.swift in Sources */,
