@@ -13,6 +13,6 @@ struct Manager {
     var name : String
     var phoneNumber : String
     var email: String
-    var taslList : [Task]?
+    var taskList : [Task]?
     var auditorList : [Auditor]?
 }

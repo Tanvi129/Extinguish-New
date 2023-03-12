@@ -24,6 +24,7 @@ class AuditorListTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        profilePic.layer.cornerRadius = profilePic.frame.height/2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
