@@ -20,4 +20,6 @@ class TaskTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBOutlet var taskID: UILabel!
+    @IBOutlet var auditorID: UILabel!
 }
