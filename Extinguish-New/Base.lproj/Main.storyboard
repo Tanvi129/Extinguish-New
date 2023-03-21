@@ -159,21 +159,67 @@
             </objects>
             <point key="canvasLocation" x="1954.9618320610687" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Task Detail-->
         <scene sceneID="9p1-cl-8cq">
             <objects>
                 <viewController id="nKH-eH-nBF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="llP-kD-3qh">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9co-Vz-lhf">
+                                <rect key="frame" x="16" y="138" width="361" height="1262"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YUk-RY-KwL">
+                                        <rect key="frame" x="0.0" y="-8" width="361" height="64"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle.inset.filled" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yGY-Me-Vsc">
+                                                <rect key="frame" x="7.9999999999995453" y="17.380347716806114" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task ID -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUC-Ew-FVl">
+                                                <rect key="frame" x="45" y="12" width="93" height="39"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RA2011026010175" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTg-5S-KWI">
+                                                <rect key="frame" x="146" y="18" width="207" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YUk-RY-KwL" firstAttribute="leading" secondItem="RTe-4V-a5Q" secondAttribute="leading" id="M9V-te-BQE"/>
+                                    <constraint firstItem="YUk-RY-KwL" firstAttribute="top" secondItem="RTe-4V-a5Q" secondAttribute="top" constant="8" id="U34-an-hKG"/>
+                                    <constraint firstItem="YUk-RY-KwL" firstAttribute="trailing" secondItem="RTe-4V-a5Q" secondAttribute="trailing" id="XiB-Ih-NeY"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="cdx-2t-V8B"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="RTe-4V-a5Q"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dnW-L0-bc0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9co-Vz-lhf" firstAttribute="leading" secondItem="dnW-L0-bc0" secondAttribute="leading" constant="16" id="Ei9-4f-WW6"/>
+                            <constraint firstItem="dnW-L0-bc0" firstAttribute="trailing" secondItem="9co-Vz-lhf" secondAttribute="trailing" constant="16" id="IKT-wR-Xsu"/>
+                            <constraint firstItem="9co-Vz-lhf" firstAttribute="bottom" secondItem="dnW-L0-bc0" secondAttribute="bottom" id="kaC-44-CFd"/>
+                            <constraint firstItem="9co-Vz-lhf" firstAttribute="top" secondItem="dnW-L0-bc0" secondAttribute="top" id="qnM-6Q-dlf"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cgc-5n-KJT"/>
+                    <navigationItem key="navigationItem" title="Task Detail" id="cgc-5n-KJT"/>
+                    <size key="freeformSize" width="393" height="1500"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czU-nZ-ewM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2783" y="9"/>
+            <point key="canvasLocation" x="2782.4427480916029" y="8.4507042253521139"/>
         </scene>
         <!--Your Auditors-->
         <scene sceneID="2Sn-Jb-2kH">
