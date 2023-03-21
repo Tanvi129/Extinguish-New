@@ -366,6 +366,7 @@
         <!--Profile-->
         <scene sceneID="KSY-O7-vna">
             <objects>
+                    <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sUo-oD-qGs" sceneMemberID="viewController">
 
                     <tabBarItem key="tabBarItem" title="Profile" image="person.circle.fill" catalog="system" id="HUc-72-zOD"/>
 

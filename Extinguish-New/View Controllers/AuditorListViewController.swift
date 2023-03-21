@@ -44,12 +44,12 @@ class AuditorListViewController: UIViewController , UITableViewDataSource , UITa
     }
 
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        tableView.estimatedRowHeight = UITableView.automaticDimension
-//         tableView.estimatedRowHeight = 90.0
-        return 90.0
-        
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+////        tableView.estimatedRowHeight = UITableView.automaticDimension
+////         tableView.estimatedRowHeight = 90.0
+//        return 90.0
+//        
+//    }
 
 //    profilePic.layer.cornerRadius = frame.height/2
 //    profilePic.layer.masksToBounds = true
@@ -120,90 +120,89 @@ class AuditorListViewController: UIViewController , UITableViewDataSource , UITa
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredAuditorList = []
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0.1
-
         
-        if searchText == "" {
-            filteredAuditorList = auditorList
-        }
-        else {
-            for audit in auditorList {
-                if audit.name.lowercased().contains(searchText.lowercased()){
-                    filteredAuditorList.append(audit)
-                }
-                filteredAuditorList.sort {
-                    $0.name > $1.name
-                }
+        
+            
+            
+            if searchText == "" {
+                filteredAuditorList = auditorList
             }
-            for audit in auditorList {
-                if audit.empID.lowercased().contains(searchText.lowercased()){
-                    filteredAuditorList.append(audit)
-                    
+            else {
+                for audit in auditorList {
+                    if audit.name.lowercased().contains(searchText.lowercased()){
+                        filteredAuditorList.append(audit)
+                    }
+                    filteredAuditorList.sort {
+                        $0.name > $1.name
+                    }
                 }
-                filteredAuditorList.sort {
-                    $0.empID > $1.empID
+                for audit in auditorList {
+                    if audit.empID.lowercased().contains(searchText.lowercased()){
+                        filteredAuditorList.append(audit)
+                        
+                    }
+                    filteredAuditorList.sort {
+                        $0.empID > $1.empID
+                    }
                 }
+                
             }
             
+            self.auditorListTable.reloadData()
         }
         
-        self.auditorListTable.reloadData()
+        //    func updateSearchResults(for searchController: UISearchController) {
+        //        if let searchText = searchController.searchBar.text {
+        //            filteredAuditorList = searchText.isEmpty ? auditorList : auditorList.filter({(audit: Auditor) -> Bool in
+        //                return audit.name.rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
+        //            })
+        //
+        //            self.auditorListTable.reloadData()
+        //        }
+        //    }
+        
+        
+        
+        //    private func configureTitleTabItems(){
+        //        navigationItem.leftBarButtonItem =
+        //        UIBarButtonItem(
+        //                        image: UIImage(systemName: "figure.stand"),
+        //                        style: .done,
+        //                        target: self,
+        //                        action: nil)
+        //
+        //        navigationItem.rightBarButtonItem =
+        //        UIBarButtonItem(
+        //                        image: UIImage(
+        //                        systemName: "rectangle.portrait.and.arrow.right"),
+        //                        style: .done,
+        //                        target: self,
+        //                        action: nil)
+        //
+        //        }
+        
+        
+        //
+        //    private let floatingButton: UIButton = {
+        //        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+        ////        button.layer.masksToBounds = true
+        //        button.layer.cornerRadius = 30
+        //        button.backgroundColor = UIColor(rgb: 0x0A2647)
+        //        let image = UIImage(systemName: "plus" , withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium))
+        //        button.setImage(image, for: .normal)
+        //        button.tintColor = .white
+        //        button.setTitleColor(.white, for: .normal)
+        //        button.layer.shadowRadius = 10
+        //        button.layer.shadowOpacity = 0.3
+        //        return button
+        //    }()
+        //
+        //    override func viewDidLayoutSubviews() {
+        //        super.viewDidLayoutSubviews()
+        //        floatingButton.frame = CGRect(x: view.frame.size.width - 70, y: view.frame.size.height - 150 , width: 60, height: 60 )
+        //
+        //    }
     }
-    
-//    func updateSearchResults(for searchController: UISearchController) {
-//        if let searchText = searchController.searchBar.text {
-//            filteredAuditorList = searchText.isEmpty ? auditorList : auditorList.filter({(audit: Auditor) -> Bool in
-//                return audit.name.rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
-//            })
-//
-//            self.auditorListTable.reloadData()
-//        }
-//    }
-    
-    
 
-//    private func configureTitleTabItems(){
-//        navigationItem.leftBarButtonItem =
-//        UIBarButtonItem(
-//                        image: UIImage(systemName: "figure.stand"),
-//                        style: .done,
-//                        target: self,
-//                        action: nil)
-//
-//        navigationItem.rightBarButtonItem =
-//        UIBarButtonItem(
-//                        image: UIImage(
-//                        systemName: "rectangle.portrait.and.arrow.right"),
-//                        style: .done,
-//                        target: self,
-//                        action: nil)
-//
-//        }
-  
 
-//
-    private let floatingButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
-//        button.layer.masksToBounds = true
-        button.layer.cornerRadius = 30
-        button.backgroundColor = UIColor(rgb: 0x0A2647)
-        let image = UIImage(systemName: "plus" , withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium))
-        button.setImage(image, for: .normal)
-        button.tintColor = .white
-        button.setTitleColor(.white, for: .normal)
-        button.layer.shadowRadius = 10
-        button.layer.shadowOpacity = 0.3
-        return button
-    }()
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        floatingButton.frame = CGRect(x: view.frame.size.width - 70, y: view.frame.size.height - 150 , width: 60, height: 60 )
-
-    }
-    
-
-}
 
