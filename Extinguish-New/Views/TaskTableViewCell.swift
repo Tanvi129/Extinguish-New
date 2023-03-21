@@ -22,4 +22,6 @@ class TaskTableViewCell: UITableViewCell {
 
     @IBOutlet var taskID: UILabel!
     @IBOutlet var auditorID: UILabel!
+    
+    @IBOutlet var status: UILabel!
 }
