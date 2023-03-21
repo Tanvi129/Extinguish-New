@@ -9,7 +9,7 @@ import UIKit
 
 class TaskListViewController: UIViewController , UITableViewDataSource , UITableViewDelegate{
     
-    var taskList = DataModel().taskList
+    var taskList = DataModel().getTaskList()
     
     
     @IBOutlet var taskListTable: UITableView!

@@ -12,7 +12,7 @@ class AuditorListViewController: UIViewController , UITableViewDataSource , UITa
     
 
     
-    var auditorList = DataModel().auditorList
+    var auditorList = DataModel().getAuditorList()
     var filteredAuditorList : [Auditor]!
 
 //    @IBOutlet var auditorPhoto: UIImageView!
