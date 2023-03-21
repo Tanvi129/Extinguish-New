@@ -7,13 +7,19 @@
 
 import UIKit
 
-class AuditorListViewController: UIViewController , UITableViewDataSource , UITableViewDelegate{
+class AuditorListViewController: UIViewController , UITableViewDataSource , UITableViewDelegate,UISearchBarDelegate{
+  
+    
 
     
     var auditorList = DataModel().auditorList
-  
+    var filteredAuditorList : [Auditor]!
 
 //    @IBOutlet var auditorPhoto: UIImageView!
+    
+    
+    @IBOutlet var auditorListSearchBar: UISearchBar!
+    
     
     
     @IBOutlet var auditorListTable: UITableView!
@@ -22,16 +28,29 @@ class AuditorListViewController: UIViewController , UITableViewDataSource , UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        configureTitleTabItems()
-     
-      
 
+     
+        auditorListSearchBar.delegate = self
+        filteredAuditorList = auditorList
+        
         self.auditorListTable.dataSource = self
         self.auditorListTable.delegate = self
-        view.addSubview(floatingButton)
 
-        // Do any additional setup after loading the view.
+        
+//        configureTitleTabItems()
+//        view.addSubview(floatingButton)
+
+
     }
+
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        tableView.estimatedRowHeight = UITableView.automaticDimension
+//         tableView.estimatedRowHeight = 90.0
+        return 90.0
+        
+    }
+
 //    profilePic.layer.cornerRadius = frame.height/2
 //    profilePic.layer.masksToBounds = true
 //    profilePic.layer.borderWidth = 1
@@ -42,25 +61,42 @@ class AuditorListViewController: UIViewController , UITableViewDataSource , UITa
 //        return 90.0
 //
 //    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return auditorList.count
+        return filteredAuditorList.count
     }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = auditorListTable.dequeueReusableCell(withIdentifier: "auditorDetail")
+        return cell?.contentView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.01
+
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = auditorListTable.dequeueReusableCell(withIdentifier: "auditorDetail", for: indexPath)
         let cityCell = cell as? AuditorListTableViewCell
-        let city = self.auditorList[indexPath.section]
+
+        let city = filteredAuditorList[indexPath.section]
+
+       
+
         
         
 //        let selectedIndexPaths = auditorListTable.indexPathsForSelectedRows
 //        let rowIsSelected = selectedIndexPaths != nil && selectedIndexPaths!.contains(indexPath)
 //        cell.imageView?.image = auditorList[indexPath.row].AuditorPic
         
-        
+      
         cityCell?.profilePic?.image = UIImage (named : city.profilePic)
-        cityCell?.profilePic?.layer.cornerRadius = (cityCell?.profilePic?.frame.size.width)! / 2
+        cityCell?.profilePic?.layer.cornerRadius = (cityCell?.profilePic?.frame.size.height)! / 2
+        cityCell?.profilePic?.layer.masksToBounds = false
         cityCell?.profilePic?.clipsToBounds = true
 //        cityCell?.profilePic?.layer.masksToBounds = false
         
@@ -81,11 +117,53 @@ class AuditorListViewController: UIViewController , UITableViewDataSource , UITa
         return cell
     }
     
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredAuditorList = []
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.1
+
         
+        if searchText == "" {
+            filteredAuditorList = auditorList
+        }
+        else {
+            for audit in auditorList {
+                if audit.name.lowercased().contains(searchText.lowercased()){
+                    filteredAuditorList.append(audit)
+                }
+                filteredAuditorList.sort {
+                    $0.name > $1.name
+                }
+            }
+            for audit in auditorList {
+                if audit.empID.lowercased().contains(searchText.lowercased()){
+                    filteredAuditorList.append(audit)
+                    
+                }
+                filteredAuditorList.sort {
+                    $0.empID > $1.empID
+                }
+            }
+            
+        }
+        
+        self.auditorListTable.reloadData()
     }
-   
+    
+//    func updateSearchResults(for searchController: UISearchController) {
+//        if let searchText = searchController.searchBar.text {
+//            filteredAuditorList = searchText.isEmpty ? auditorList : auditorList.filter({(audit: Auditor) -> Bool in
+//                return audit.name.rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
+//            })
+//
+//            self.auditorListTable.reloadData()
+//        }
+//    }
+    
+    
+
 //    private func configureTitleTabItems(){
 //        navigationItem.leftBarButtonItem =
 //        UIBarButtonItem(
