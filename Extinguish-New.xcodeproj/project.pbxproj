@@ -27,6 +27,7 @@
 		9C1A88CA29B6F51C006C5A7A /* RoundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A88C929B6F51C006C5A7A /* RoundCorners.swift */; };
 		9C1A88CE29B6F55D006C5A7A /* TaskDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A88CD29B6F55D006C5A7A /* TaskDetailsModel.swift */; };
 		9C1A88D229B6F7B1006C5A7A /* AuditorListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A88D129B6F7B1006C5A7A /* AuditorListTableViewCell.swift */; };
+		9CD51E4F29CC6CEC00111FE4 /* AuditorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD51E4E29CC6CEC00111FE4 /* AuditorDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		9C1A88C929B6F51C006C5A7A /* RoundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoundCorners.swift; path = "Extinguish-New/Data/RoundCorners.swift"; sourceTree = SOURCE_ROOT; };
 		9C1A88CD29B6F55D006C5A7A /* TaskDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskDetailsModel.swift; path = "Extinguish-New/Data/TaskDetailsModel.swift"; sourceTree = SOURCE_ROOT; };
 		9C1A88D129B6F7B1006C5A7A /* AuditorListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuditorListTableViewCell.swift; path = "Extinguish-New/Data/AuditorListTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		9CD51E4E29CC6CEC00111FE4 /* AuditorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditorDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				2D0D620E29B5EED400C6BF7A /* TaskListViewController.swift */,
 				2D0D621F29B5F1F800C6BF7A /* AuditorListViewController.swift */,
 				2D0D622529B5F36E00C6BF7A /* ProfileViewController.swift */,
+				9CD51E4E29CC6CEC00111FE4 /* AuditorDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				9C1A88C829B6F4FA006C5A7A /* PaddingLabel.swift in Sources */,
 				2D24CC1229B7313C00756C8A /* DistributorDetailsModel.swift in Sources */,
 				2D0D620D29B5EED400C6BF7A /* SceneDelegate.swift in Sources */,
+				9CD51E4F29CC6CEC00111FE4 /* AuditorDetailViewController.swift in Sources */,
 				9C1A88C629B6F4E0006C5A7A /* HexColorsExtension.swift in Sources */,
 				2D24CC1829B7355D00756C8A /* ManagerDetailsModel.swift in Sources */,
 				9C1A88D229B6F7B1006C5A7A /* AuditorListTableViewCell.swift in Sources */,
