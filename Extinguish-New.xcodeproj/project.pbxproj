@@ -21,6 +21,8 @@
 		2D24CC1429B731D100756C8A /* CompanyDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D24CC1329B731D100756C8A /* CompanyDetailsModel.swift */; };
 		2D24CC1629B7322E00756C8A /* SubtaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D24CC1529B7322E00756C8A /* SubtaskModel.swift */; };
 		2D24CC1829B7355D00756C8A /* ManagerDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D24CC1729B7355D00756C8A /* ManagerDetailsModel.swift */; };
+		2DBFEB9329CC6B50001B5506 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFEB9229CC6B50001B5506 /* LoginScreenViewController.swift */; };
+		2DBFEB9529CC6EE6001B5506 /* UITextFieldUnderlined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFEB9429CC6EE6001B5506 /* UITextFieldUnderlined.swift */; };
 		9C1A88C429B6F458006C5A7A /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A88C329B6F458006C5A7A /* DataModel.swift */; };
 		9C1A88C629B6F4E0006C5A7A /* HexColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A88C529B6F4E0006C5A7A /* HexColorsExtension.swift */; };
 		9C1A88C829B6F4FA006C5A7A /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A88C729B6F4FA006C5A7A /* PaddingLabel.swift */; };
@@ -47,6 +49,8 @@
 		2D24CC1329B731D100756C8A /* CompanyDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailsModel.swift; sourceTree = "<group>"; };
 		2D24CC1529B7322E00756C8A /* SubtaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtaskModel.swift; sourceTree = "<group>"; };
 		2D24CC1729B7355D00756C8A /* ManagerDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerDetailsModel.swift; sourceTree = "<group>"; };
+		2DBFEB9229CC6B50001B5506 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		2DBFEB9429CC6EE6001B5506 /* UITextFieldUnderlined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UITextFieldUnderlined.swift; path = "Extinguish-New/View Controllers/UITextFieldUnderlined.swift"; sourceTree = SOURCE_ROOT; };
 		9C1A88C329B6F458006C5A7A /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		9C1A88C529B6F4E0006C5A7A /* HexColorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HexColorsExtension.swift; path = "Extinguish-New/Data/HexColorsExtension.swift"; sourceTree = SOURCE_ROOT; };
 		9C1A88C729B6F4FA006C5A7A /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PaddingLabel.swift; path = "Extinguish-New/Data/PaddingLabel.swift"; sourceTree = SOURCE_ROOT; };
@@ -108,6 +112,9 @@
 				2D0D622529B5F36E00C6BF7A /* ProfileViewController.swift */,
 				2D0D621F29B5F1F800C6BF7A /* AuditorListViewController.swift */,
 				9CD51E4E29CC6CEC00111FE4 /* AuditorDetailViewController.swift */,
+
+				2DBFEB9229CC6B50001B5506 /* LoginScreenViewController.swift */,
+
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -148,6 +155,7 @@
 				9C1A88C529B6F4E0006C5A7A /* HexColorsExtension.swift */,
 				9C1A88C729B6F4FA006C5A7A /* PaddingLabel.swift */,
 				9C1A88C929B6F51C006C5A7A /* RoundCorners.swift */,
+				2DBFEB9429CC6EE6001B5506 /* UITextFieldUnderlined.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -225,11 +233,13 @@
 			files = (
 				2D0D620F29B5EED400C6BF7A /* TaskListViewController.swift in Sources */,
 				2D0D622029B5F1F800C6BF7A /* AuditorListViewController.swift in Sources */,
+				2DBFEB9329CC6B50001B5506 /* LoginScreenViewController.swift in Sources */,
 				2D24CC0E29B6F95F00756C8A /* TaskTableViewCell.swift in Sources */,
 				2D0D622629B5F36E00C6BF7A /* ProfileViewController.swift in Sources */,
 				2D0D620B29B5EED400C6BF7A /* AppDelegate.swift in Sources */,
 				9C1A88C829B6F4FA006C5A7A /* PaddingLabel.swift in Sources */,
 				2D24CC1229B7313C00756C8A /* DistributorDetailsModel.swift in Sources */,
+				2DBFEB9529CC6EE6001B5506 /* UITextFieldUnderlined.swift in Sources */,
 				2D0D620D29B5EED400C6BF7A /* SceneDelegate.swift in Sources */,
 				9CD51E4F29CC6CEC00111FE4 /* AuditorDetailViewController.swift in Sources */,
 				9C1A88C629B6F4E0006C5A7A /* HexColorsExtension.swift in Sources */,
