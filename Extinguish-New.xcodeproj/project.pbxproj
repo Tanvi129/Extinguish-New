@@ -15,6 +15,11 @@
 		2D0D621729B5EED400C6BF7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D0D621529B5EED400C6BF7A /* LaunchScreen.storyboard */; };
 		2D0D622029B5F1F800C6BF7A /* AuditorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D621F29B5F1F800C6BF7A /* AuditorListViewController.swift */; };
 		2D0D622629B5F36E00C6BF7A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D622529B5F36E00C6BF7A /* ProfileViewController.swift */; };
+		2D16B96E29D499D200AF10D5 /* SubtaskDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D16B96D29D499D200AF10D5 /* SubtaskDetailTableViewController.swift */; };
+		2D16B97029D49A2300AF10D5 /* SubtaskTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D16B96F29D49A2300AF10D5 /* SubtaskTitleTableViewCell.swift */; };
+		2D16B97229D49A3D00AF10D5 /* SubtaskDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D16B97129D49A3D00AF10D5 /* SubtaskDetailTableViewCell.swift */; };
+		2D16B97529D571D500AF10D5 /* TaskNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D16B97429D571D500AF10D5 /* TaskNameTableViewCell.swift */; };
+		2D16B97729D5732C00AF10D5 /* TaskDetail2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D16B97629D5732C00AF10D5 /* TaskDetail2TableViewController.swift */; };
 		2D24CC0E29B6F95F00756C8A /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D24CC0D29B6F95F00756C8A /* TaskTableViewCell.swift */; };
 		2D24CC1029B72D1C00756C8A /* AuditorDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D24CC0F29B72D1C00756C8A /* AuditorDetailsModel.swift */; };
 		2D24CC1229B7313C00756C8A /* DistributorDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D24CC1129B7313C00756C8A /* DistributorDetailsModel.swift */; };
@@ -43,6 +48,11 @@
 		2D0D621829B5EED400C6BF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D0D621F29B5F1F800C6BF7A /* AuditorListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditorListViewController.swift; sourceTree = "<group>"; };
 		2D0D622529B5F36E00C6BF7A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2D16B96D29D499D200AF10D5 /* SubtaskDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtaskDetailTableViewController.swift; sourceTree = "<group>"; };
+		2D16B96F29D49A2300AF10D5 /* SubtaskTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtaskTitleTableViewCell.swift; sourceTree = "<group>"; };
+		2D16B97129D49A3D00AF10D5 /* SubtaskDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtaskDetailTableViewCell.swift; sourceTree = "<group>"; };
+		2D16B97429D571D500AF10D5 /* TaskNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskNameTableViewCell.swift; sourceTree = "<group>"; };
+		2D16B97629D5732C00AF10D5 /* TaskDetail2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetail2TableViewController.swift; sourceTree = "<group>"; };
 		2D24CC0D29B6F95F00756C8A /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		2D24CC0F29B72D1C00756C8A /* AuditorDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditorDetailsModel.swift; sourceTree = "<group>"; };
 		2D24CC1129B7313C00756C8A /* DistributorDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributorDetailsModel.swift; sourceTree = "<group>"; };
@@ -109,13 +119,12 @@
 			isa = PBXGroup;
 			children = (
 				2D0D620E29B5EED400C6BF7A /* TaskListViewController.swift */,
-				2D0D621F29B5F1F800C6BF7A /* AuditorListViewController.swift */,
 				2D0D622529B5F36E00C6BF7A /* ProfileViewController.swift */,
-
+				2D0D621F29B5F1F800C6BF7A /* AuditorListViewController.swift */,
 				9CD51E4E29CC6CEC00111FE4 /* AuditorDetailViewController.swift */,
-
 				2DBFEB9229CC6B50001B5506 /* LoginScreenViewController.swift */,
-
+				2D16B96D29D499D200AF10D5 /* SubtaskDetailTableViewController.swift */,
+				2D16B97629D5732C00AF10D5 /* TaskDetail2TableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -144,8 +153,11 @@
 		2D0D622329B5F27C00C6BF7A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2D16B97329D571A000AF10D5 /* TaskDetailCells */,
 				2D24CC0D29B6F95F00756C8A /* TaskTableViewCell.swift */,
 				9C1A88D129B6F7B1006C5A7A /* AuditorListTableViewCell.swift */,
+				2D16B96F29D49A2300AF10D5 /* SubtaskTitleTableViewCell.swift */,
+				2D16B97129D49A3D00AF10D5 /* SubtaskDetailTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,6 +171,14 @@
 				2DBFEB9429CC6EE6001B5506 /* UITextFieldUnderlined.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2D16B97329D571A000AF10D5 /* TaskDetailCells */ = {
+			isa = PBXGroup;
+			children = (
+				2D16B97429D571D500AF10D5 /* TaskNameTableViewCell.swift */,
+			);
+			path = TaskDetailCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,12 +252,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D16B97029D49A2300AF10D5 /* SubtaskTitleTableViewCell.swift in Sources */,
 				2D0D620F29B5EED400C6BF7A /* TaskListViewController.swift in Sources */,
 				2D0D622029B5F1F800C6BF7A /* AuditorListViewController.swift in Sources */,
 				2DBFEB9329CC6B50001B5506 /* LoginScreenViewController.swift in Sources */,
+				2D16B97529D571D500AF10D5 /* TaskNameTableViewCell.swift in Sources */,
 				2D24CC0E29B6F95F00756C8A /* TaskTableViewCell.swift in Sources */,
+				2D16B97729D5732C00AF10D5 /* TaskDetail2TableViewController.swift in Sources */,
 				2D0D622629B5F36E00C6BF7A /* ProfileViewController.swift in Sources */,
 				2D0D620B29B5EED400C6BF7A /* AppDelegate.swift in Sources */,
+				2D16B97229D49A3D00AF10D5 /* SubtaskDetailTableViewCell.swift in Sources */,
+				2D16B96E29D499D200AF10D5 /* SubtaskDetailTableViewController.swift in Sources */,
 				9C1A88C829B6F4FA006C5A7A /* PaddingLabel.swift in Sources */,
 				2D24CC1229B7313C00756C8A /* DistributorDetailsModel.swift in Sources */,
 				2DBFEB9529CC6EE6001B5506 /* UITextFieldUnderlined.swift in Sources */,
