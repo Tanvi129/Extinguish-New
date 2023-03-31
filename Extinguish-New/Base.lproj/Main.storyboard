@@ -126,11 +126,7 @@
                                             <outlet property="auditorID" destination="ZCa-yS-V3P" id="nNI-3E-C8E"/>
                                             <outlet property="status" destination="bPd-vS-5LP" id="u6j-WW-bWA"/>
                                             <outlet property="taskID" destination="mfb-cj-Mkh" id="IPx-zO-6yX"/>
-
-                                            <segue destination="nKH-eH-nBF" kind="show" id="gMN-b1-osw"/>
-
                                             <segue destination="8UJ-5i-Ghj" kind="show" id="EJj-mF-ifJ"/>
-
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -164,19 +160,6 @@
             </objects>
             <point key="canvasLocation" x="1954.9618320610687" y="3.5211267605633805"/>
         </scene>
-
-        <!--View Controller-->
-        <scene sceneID="9p1-cl-8cq">
-            <objects>
-                <viewController id="nKH-eH-nBF" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="llP-kD-3qh">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="dnW-L0-bc0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="cgc-5n-KJT"/>
-
         <!--Task Detail-->
         <scene sceneID="hj1-CO-sMV">
             <objects>
@@ -880,14 +863,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Task Detail" id="GB6-ig-ro7"/>
-
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIp-gL-hco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="2783" y="9"/>
-
-            <point key="canvasLocation" x="3679" y="810"/>
         </scene>
         <!--Subtasks-->
         <scene sceneID="um4-cb-xTd">
@@ -1239,7 +1218,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bX2-W2-ShL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3485" y="4"/>
-
         </scene>
         <!--Your Auditors-->
         <scene sceneID="2Sn-Jb-2kH">
@@ -1370,7 +1348,6 @@
                                 <color key="textColor" red="0.019607843137254902" green="0.44705882352941173" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oqO-90-FwW">
                                 <rect key="frame" x="164" y="446" width="75" height="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1379,7 +1356,9 @@
                                 <rect key="frame" x="8" y="437" width="377" height="60"/>
                                 <color key="backgroundColor" red="0.92549019607843142" green="0.94901960784313721" blue="1" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="example@gmail.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ejb-Bq-OtG">
                                 <rect key="frame" x="36" y="489" width="327" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1396,7 +1375,6 @@
                                 <rect key="frame" x="227" y="595" width="136" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1628,32 +1606,26 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Tanvi Gupta" width="1576" height="1919"/>
         <image name="arrow.right" catalog="system" width="128" height="95"/>
-
         <image name="background" width="1044" height="902"/>
-
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="case" catalog="system" width="128" height="100"/>
-
         <image name="circle.inset.filled" catalog="system" width="128" height="123"/>
         <image name="cube.box" catalog="system" width="128" height="123"/>
         <image name="figure.stand" catalog="system" width="74" height="128"/>
+        <image name="figure.wave" catalog="system" width="80" height="128"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
-
         <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="mail.fill" catalog="system" width="128" height="93"/>
-
         <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>
         <image name="minus" catalog="system" width="128" height="26"/>
-
         <image name="note.text" catalog="system" width="128" height="107"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
-
         <image name="profilepic1" width="221" height="228"/>
-
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
