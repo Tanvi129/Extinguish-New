@@ -15,9 +15,9 @@ class TaskDetail2TableViewController: UITableViewController {
         let cellOnScreen : [UITableViewCell] = [section1cell1,section2cell1,section3cell1,section3cell2 , section4cell1 , section5cell1 , section5cell2 , section6cell1 , section6cell2 , section7cell1 , section7cell2 , section8cell1]
         applyBorder(listofCells: cellOnScreen)
         
-//        let padding = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
-//        tableView.contentInset = padding
-//        tableView.rowHeight = UITableView.automaticDimension
+        let padding = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        tableView.contentInset = padding
+        tableView.rowHeight = UITableView.automaticDimension
 ////        tableView.estimatedRowHeight = 44 // or any other value you want
 //        
 //        // You can also adjust the width of the table view itself if you want to

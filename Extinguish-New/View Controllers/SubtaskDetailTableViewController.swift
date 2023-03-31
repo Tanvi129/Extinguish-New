@@ -96,13 +96,12 @@ class SubtaskDetailTableViewController: UIViewController , UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 1
-        
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         1
     }
+    
+    
+
+    
 
     /*
     // Override to support conditional editing of the table view.
