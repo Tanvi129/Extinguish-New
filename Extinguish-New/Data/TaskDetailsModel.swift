@@ -16,6 +16,7 @@ struct Task {
     var auditorAssigned : Auditor?
     var startTime : String
     var endTime : String
+//    var expiredFrom : String
     var distributorDetails : DistributorDetails
     var companyDetails : CompanyDetails
     var subtask : [Subtask]?

@@ -105,8 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				2D0D620E29B5EED400C6BF7A /* TaskListViewController.swift */,
-				2D0D621F29B5F1F800C6BF7A /* AuditorListViewController.swift */,
 				2D0D622529B5F36E00C6BF7A /* ProfileViewController.swift */,
+				2D0D621F29B5F1F800C6BF7A /* AuditorListViewController.swift */,
 				9CD51E4E29CC6CEC00111FE4 /* AuditorDetailViewController.swift */,
 			);
 			path = "View Controllers";
