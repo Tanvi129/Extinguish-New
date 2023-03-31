@@ -1320,7 +1320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lp8-sv-ejt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2027" y="718"/>
+            <point key="canvasLocation" x="2026.7175572519084" y="717.6056338028169"/>
         </scene>
         <!--Auditor Detail View Controller-->
         <scene sceneID="dwb-4i-8Cx">
@@ -1356,25 +1356,6 @@
                                 <rect key="frame" x="8" y="437" width="377" height="60"/>
                                 <color key="backgroundColor" red="0.92549019607843142" green="0.94901960784313721" blue="1" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="example@gmail.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ejb-Bq-OtG">
-                                <rect key="frame" x="36" y="489" width="327" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" textContentType="email"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3zk-uw-mmu">
-                                <rect key="frame" x="36" y="542" width="327" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaP-PT-cIU">
-                                <rect key="frame" x="227" y="595" width="136" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1497,7 +1478,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJb-cV-aNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4398" y="1163"/>
+            <point key="canvasLocation" x="3769" y="1163"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="i1E-Sz-n92">
@@ -1572,8 +1553,50 @@
                     <view key="view" contentMode="scaleToFill" id="x2V-EW-Uig">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sitanshuProfilePic" translatesAutoresizingMaskIntoConstraints="NO" id="9YC-ki-Ys4">
+                                <rect key="frame" x="0.0" y="155" width="393" height="342"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="342" id="BvU-Za-r1D"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sitanshu" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Btl-3V-uyX">
+                                <rect key="frame" x="62" y="582" width="269" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RA2011030010141" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwD-HD-iVE">
+                                <rect key="frame" x="62" y="637" width="269" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="KgG-eE-Lny"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="sitanshu@GHLimited.com" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvx-B2-Ex6">
+                                <rect key="frame" x="101" y="694" width="199" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Nct-03-NqB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9YC-ki-Ys4" firstAttribute="leading" secondItem="Nct-03-NqB" secondAttribute="leading" id="DId-WB-2sM"/>
+                            <constraint firstItem="Nct-03-NqB" firstAttribute="trailing" secondItem="9YC-ki-Ys4" secondAttribute="trailing" id="RrL-gU-ddB"/>
+                            <constraint firstItem="9YC-ki-Ys4" firstAttribute="centerX" secondItem="mwD-HD-iVE" secondAttribute="centerX" id="SXH-WD-SUi"/>
+                            <constraint firstItem="9YC-ki-Ys4" firstAttribute="centerX" secondItem="Btl-3V-uyX" secondAttribute="centerX" id="Vvc-oL-POC"/>
+                            <constraint firstItem="mwD-HD-iVE" firstAttribute="top" secondItem="Btl-3V-uyX" secondAttribute="bottom" constant="25" id="dja-Sk-Dwm"/>
+                            <constraint firstItem="Btl-3V-uyX" firstAttribute="top" secondItem="9YC-ki-Ys4" secondAttribute="bottom" constant="85" id="fQa-kS-hUs"/>
+                            <constraint firstItem="mwD-HD-iVE" firstAttribute="leading" secondItem="Nct-03-NqB" secondAttribute="leading" constant="62" id="i8r-m8-6FB"/>
+                            <constraint firstItem="mwD-HD-iVE" firstAttribute="leading" secondItem="Btl-3V-uyX" secondAttribute="leading" id="u3J-7I-AsN"/>
+                            <constraint firstItem="9YC-ki-Ys4" firstAttribute="top" secondItem="Nct-03-NqB" secondAttribute="top" id="vyF-ZY-70d"/>
+                            <constraint firstItem="Nct-03-NqB" firstAttribute="bottom" secondItem="mwD-HD-iVE" secondAttribute="bottom" constant="292" id="yg9-v6-gSg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Profile" id="Dm1-js-Ko3">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="person.circle" catalog="system" id="dTW-Ah-cw2">
@@ -1583,7 +1606,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTQ-XN-SNk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1955" y="1500"/>
+            <point key="canvasLocation" x="1954.9618320610687" y="1500"/>
         </scene>
         <!--Profile-->
         <scene sceneID="KSY-O7-vna">
@@ -1626,6 +1649,7 @@
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <image name="profilepic1" width="221" height="228"/>
+        <image name="sitanshuProfilePic" width="640" height="640"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
