@@ -20,8 +20,6 @@ class AuditorListViewController: UIViewController , UITableViewDataSource , UITa
     
     @IBOutlet var auditorListSearchBar: UISearchBar!
     
-    
-    
     @IBOutlet var auditorListTable: UITableView!
     
     
@@ -62,6 +60,7 @@ class AuditorListViewController: UIViewController , UITableViewDataSource , UITa
 //
 //    }
 
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -85,7 +84,7 @@ class AuditorListViewController: UIViewController , UITableViewDataSource , UITa
 
         let city = filteredAuditorList[indexPath.section]
 
-       
+         
 
         
         
@@ -117,7 +116,28 @@ class AuditorListViewController: UIViewController , UITableViewDataSource , UITa
         return cell
     }
     
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondVC = storyboard.instantiateViewController(identifier: "auditorDetailSegue") as! AuditorDetailViewController
+        
+        let cell = auditorListTable.dequeueReusableCell(withIdentifier: "auditorDetail", for: indexPath)
+        let cityCell = cell as? AuditorListTableViewCell
+        
+        secondVC.auditorPhoto = cityCell?.profilePic!
+        secondVC.index = indexPath.section
+       
+        secondVC.modalPresentationStyle = .fullScreen
+        secondVC.modalTransitionStyle = .crossDissolve
+              
+        show(secondVC, sender: self)
+//        performSegue(withIdentifier: "auditorDetailSegue", sender: self)
+    }
+    
+    
+    
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredAuditorList = []
         

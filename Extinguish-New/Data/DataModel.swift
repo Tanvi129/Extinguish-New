@@ -16,14 +16,14 @@ class DataModel {
     init(){
         auditorList = [
             Auditor(
-                profilePic:"profilepic1",
+                profilePic:"tanviProfilePic",
                 empID: "12345",
                 name: "Tanvi Gupta",
                 phoneNumber: "9557146955",
                 email: "tanvigupta129@gmail.com",
                 location: "None"
             ),
-            Auditor(profilePic: "profilepic1",
+            Auditor(profilePic: "vanshProfilePic",
                     empID: "12345",
                     name: "Vansh Agarwal",
                     phoneNumber: "9557146955",
@@ -37,13 +37,36 @@ class DataModel {
                     email: "tanvigupta129@gmail.com",
                     location: "None"
                    ),
-            Auditor(profilePic: "profilepic1",
+            Auditor(profilePic: "thrishaProfilePic",
                     empID: "12345",
                     name: "Thrishalini",
                     phoneNumber: "9557146955",
                     email: "tanvigupta129@gmail.com",
                     location: "None"
+                   ),
+            Auditor(profilePic: "sitanshuProfilePic",
+                    empID: "12345",
+                    name: "Sitanshu",
+                    phoneNumber: "9557146955",
+                    email: "tanvigupta129@gmail.com",
+                    location: "None"
+                   ),
+            Auditor(profilePic: "junaidProfilePic",
+                    empID: "12345",
+                    name: "Junaid",
+                    phoneNumber: "88254128",
+                    email: "tanvigupta129@gmail.com",
+                    location: "None"
+                   ),
+            Auditor(profilePic: "joshuaProfilePic",
+                    empID: "12345",
+                    name: "Joshua",
+                    phoneNumber: "88254128",
+                    email: "tanvigupta129@gmail.com",
+                    location: "None"
                    )
+        
+            
         ]
         
         taskList = [
