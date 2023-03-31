@@ -28,7 +28,6 @@
 		2D24CC1829B7355D00756C8A /* ManagerDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D24CC1729B7355D00756C8A /* ManagerDetailsModel.swift */; };
 		2DBFEB9329CC6B50001B5506 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFEB9229CC6B50001B5506 /* LoginScreenViewController.swift */; };
 		2DBFEB9529CC6EE6001B5506 /* UITextFieldUnderlined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFEB9429CC6EE6001B5506 /* UITextFieldUnderlined.swift */; };
-		2DBFEB9729CD8ED2001B5506 /* TaskDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFEB9629CD8ED2001B5506 /* TaskDetailTableViewController.swift */; };
 		9C1A88C429B6F458006C5A7A /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A88C329B6F458006C5A7A /* DataModel.swift */; };
 		9C1A88C629B6F4E0006C5A7A /* HexColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A88C529B6F4E0006C5A7A /* HexColorsExtension.swift */; };
 		9C1A88C829B6F4FA006C5A7A /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A88C729B6F4FA006C5A7A /* PaddingLabel.swift */; };
@@ -62,7 +61,6 @@
 		2D24CC1729B7355D00756C8A /* ManagerDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerDetailsModel.swift; sourceTree = "<group>"; };
 		2DBFEB9229CC6B50001B5506 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		2DBFEB9429CC6EE6001B5506 /* UITextFieldUnderlined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UITextFieldUnderlined.swift; path = "Extinguish-New/View Controllers/UITextFieldUnderlined.swift"; sourceTree = SOURCE_ROOT; };
-		2DBFEB9629CD8ED2001B5506 /* TaskDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailTableViewController.swift; sourceTree = "<group>"; };
 		9C1A88C329B6F458006C5A7A /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		9C1A88C529B6F4E0006C5A7A /* HexColorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HexColorsExtension.swift; path = "Extinguish-New/Data/HexColorsExtension.swift"; sourceTree = SOURCE_ROOT; };
 		9C1A88C729B6F4FA006C5A7A /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PaddingLabel.swift; path = "Extinguish-New/Data/PaddingLabel.swift"; sourceTree = SOURCE_ROOT; };
@@ -124,13 +122,9 @@
 				2D0D622529B5F36E00C6BF7A /* ProfileViewController.swift */,
 				2D0D621F29B5F1F800C6BF7A /* AuditorListViewController.swift */,
 				9CD51E4E29CC6CEC00111FE4 /* AuditorDetailViewController.swift */,
-
 				2DBFEB9229CC6B50001B5506 /* LoginScreenViewController.swift */,
-
-				2DBFEB9629CD8ED2001B5506 /* TaskDetailTableViewController.swift */,
 				2D16B96D29D499D200AF10D5 /* SubtaskDetailTableViewController.swift */,
 				2D16B97629D5732C00AF10D5 /* TaskDetail2TableViewController.swift */,
-
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -262,7 +256,6 @@
 				2D0D620F29B5EED400C6BF7A /* TaskListViewController.swift in Sources */,
 				2D0D622029B5F1F800C6BF7A /* AuditorListViewController.swift in Sources */,
 				2DBFEB9329CC6B50001B5506 /* LoginScreenViewController.swift in Sources */,
-				2DBFEB9729CD8ED2001B5506 /* TaskDetailTableViewController.swift in Sources */,
 				2D16B97529D571D500AF10D5 /* TaskNameTableViewCell.swift in Sources */,
 				2D24CC0E29B6F95F00756C8A /* TaskTableViewCell.swift in Sources */,
 				2D16B97729D5732C00AF10D5 /* TaskDetail2TableViewController.swift in Sources */,
