@@ -30,6 +30,9 @@
                                     <segment title="InProgress"/>
                                     <segment title="Unassigned"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControlActionChangedWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="kpm-df-dt2"/>
+                                </connections>
                             </segmentedControl>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="VUs-Ub-6DM">
                                 <rect key="frame" x="16" y="202" width="361" height="56"/>
@@ -153,6 +156,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Task Summary" id="KBg-og-gHm"/>
                     <connections>
+                        <outlet property="segmentedControlTaskList" destination="xvY-mP-y6l" id="yEj-WX-CMS"/>
                         <outlet property="taskListTable" destination="zAJ-MX-mKf" id="JrF-NM-I3F"/>
                     </connections>
                 </viewController>
