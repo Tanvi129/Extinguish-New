@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class LoginScreenViewController: UIViewController {
 
@@ -48,6 +50,21 @@ class LoginScreenViewController: UIViewController {
     
     
     
+    @IBAction func login(_ sender: Any) {
+        Auth.auth().signIn(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (authResult, error) in
+          if let authResult = authResult {
+            let user = authResult.user
+            print("User has Signed In")
+            self.performSegue(withIdentifier: "mainEntry", sender: nil)
+            
+          }
+          if let error = error {
+              print("Cant Sign in user:")
+          }
+        }
+          }
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -58,4 +75,4 @@ class LoginScreenViewController: UIViewController {
     }
     */
 
-}
+

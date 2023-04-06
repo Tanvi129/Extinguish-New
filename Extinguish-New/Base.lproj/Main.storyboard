@@ -1677,7 +1677,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="CPs-NM-oav" kind="presentation" modalPresentationStyle="fullScreen" id="mA5-3W-xAe"/>
+                                    <action selector="login:" destination="xMn-t7-2eh" eventType="touchUpInside" id="cPQ-6e-YSX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcV-S7-qCG">
@@ -1729,6 +1729,7 @@
                         <outlet property="loginButton" destination="L8E-rq-Baa" id="s8o-dH-Y0F"/>
                         <outlet property="passwordTextField" destination="Znn-uv-3Dw" id="TnZ-YS-Nwo"/>
                         <outlet property="signUpButton" destination="UcV-S7-qCG" id="YOy-o0-Opv"/>
+                        <segue destination="CPs-NM-oav" kind="presentation" identifier="mainEntry" modalPresentationStyle="fullScreen" id="EYX-9n-svZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8yO-WI-JPn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
