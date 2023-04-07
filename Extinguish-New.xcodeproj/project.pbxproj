@@ -109,7 +109,10 @@
 		2D0D620929B5EED400C6BF7A /* Extinguish-New */ = {
 			isa = PBXGroup;
 			children = (
+
 				2D19A16029DF259E00068F4D /* GoogleService-Info.plist */,
+
+
 				2D0D622429B5F28D00C6BF7A /* Extensions */,
 				2D0D622329B5F27C00C6BF7A /* Views */,
 				2D0D622229B5F24000C6BF7A /* Data */,
@@ -270,7 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D0D621729B5EED400C6BF7A /* LaunchScreen.storyboard in Resources */,
+
 				2D19A16129DF259E00068F4D /* GoogleService-Info.plist in Resources */,
+
+
 				2D0D621429B5EED400C6BF7A /* Assets.xcassets in Resources */,
 				2D0D621229B5EED400C6BF7A /* Main.storyboard in Resources */,
 			);

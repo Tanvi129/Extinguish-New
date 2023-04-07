@@ -9,9 +9,23 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    
+    @IBOutlet var nameTextField: UITextField!
+    
+    @IBOutlet var emailTextField: UITextField!
+
+        
+    @IBOutlet var managerIDTextField: UITextField!
+        
+    @IBOutlet var passwordTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nameTextField.setUnderLine()
+        emailTextField.setUnderLine()
+        managerIDTextField.setUnderLine()
+        passwordTextField.setUnderLine()
         // Do any additional setup after loading the view.
     }
     
