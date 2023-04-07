@@ -14,6 +14,8 @@ class TaskDetail2TableViewController: UITableViewController {
     var companyDetailsBool : Bool = false
     var distributerDetailsBool : Bool = false
 
+    
+    
     @IBOutlet var sessionIcon: UIImageView!
     
     @IBOutlet var companyIcon: UIImageView!
@@ -55,10 +57,19 @@ class TaskDetail2TableViewController: UITableViewController {
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         taskName.text = "Panda Task"
         let cellOnScreen : [UITableViewCell] = [section1cell1,section2cell1,section3cell1,section3cell2 , section4cell1 , section5cell1 , section5cell2 , section6cell1 , section6cell2 , section7cell1 , section7cell2 , section8cell1]
         applyBorder(listofCells: cellOnScreen)
+        section3cell1.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        section3cell2.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        section5cell1.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        section5cell2.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        section6cell1.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        section6cell2.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        section7cell1.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        section7cell2.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         
 //        let padding = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
 //        tableView.contentInset = padding
