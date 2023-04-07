@@ -30,6 +30,9 @@
                                     <segment title="InProgress"/>
                                     <segment title="Unassigned"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControlActionChangedWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="kpm-df-dt2"/>
+                                </connections>
                             </segmentedControl>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="VUs-Ub-6DM">
                                 <rect key="frame" x="16" y="202" width="361" height="56"/>
@@ -153,6 +156,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Task Summary" id="KBg-og-gHm"/>
                     <connections>
+                        <outlet property="segmentedControlTaskList" destination="xvY-mP-y6l" id="yEj-WX-CMS"/>
                         <outlet property="taskListTable" destination="zAJ-MX-mKf" id="JrF-NM-I3F"/>
                     </connections>
                 </viewController>
@@ -265,7 +269,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="minus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hrr-pi-eX2">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hrr-pi-eX2">
                                                     <rect key="frame" x="343" y="18" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" systemColor="labelColor"/>
@@ -361,7 +365,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="minus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sjy-EA-v4B">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sjy-EA-v4B">
                                                     <rect key="frame" x="347" y="18" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" systemColor="labelColor"/>
@@ -411,7 +415,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="minus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1j9-hS-jzD">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1j9-hS-jzD">
                                                     <rect key="frame" x="347" y="18" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" systemColor="labelColor"/>
@@ -490,7 +494,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="minus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Mqw-Ze-ruM">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Mqw-Ze-ruM">
                                                     <rect key="frame" x="347" y="18" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" systemColor="labelColor"/>
@@ -606,6 +610,8 @@
                     <navigationItem key="navigationItem" title="Task Detail" id="NM8-x5-qvR"/>
                     <size key="freeformSize" width="393" height="2000"/>
                     <connections>
+                        <outlet property="companyIcon" destination="Mqw-Ze-ruM" id="VCC-b3-T0c"/>
+                        <outlet property="distributorIcon" destination="1j9-hS-jzD" id="zDY-UE-w6i"/>
                         <outlet property="section1cell1" destination="oan-zo-GEe" id="iw2-Pe-B3Q"/>
                         <outlet property="section2cell1" destination="evg-cq-jRL" id="lIC-B9-ADQ"/>
                         <outlet property="section3cell1" destination="ykb-eX-IXb" id="zIJ-DD-4f2"/>
@@ -618,6 +624,8 @@
                         <outlet property="section7cell1" destination="mBr-Wo-bh8" id="Da8-7i-APc"/>
                         <outlet property="section7cell2" destination="DiI-Wd-ard" id="KjA-CB-NCU"/>
                         <outlet property="section8cell1" destination="vfc-hM-bod" id="8Sf-e0-iu0"/>
+                        <outlet property="sessionIcon" destination="sjy-EA-v4B" id="rra-Ut-9WS"/>
+                        <outlet property="statusIcon" destination="hrr-pi-eX2" id="LY4-Ic-Mq1"/>
                         <outlet property="taskName" destination="X0d-V0-87C" id="kDc-0a-CND"/>
                     </connections>
                 </tableViewController>
@@ -1478,7 +1486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJb-cV-aNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3769" y="1163"/>
+            <point key="canvasLocation" x="4413" y="1144"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="i1E-Sz-n92">
@@ -1695,7 +1703,9 @@
                                 <rect key="frame" x="36" y="542" width="327" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inp-2H-oNX">
                                 <rect key="frame" x="227" y="595" width="136" height="21"/>
@@ -1713,7 +1723,11 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
+
+                                    <action selector="login:" destination="xMn-t7-2eh" eventType="touchUpInside" id="cPQ-6e-YSX"/>
+
                                     <segue destination="CPs-NM-oav" kind="presentation" modalPresentationStyle="fullScreen" id="mA5-3W-xAe"/>
+
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcV-S7-qCG">
@@ -1765,6 +1779,9 @@
                         <outlet property="loginButton" destination="L8E-rq-Baa" id="s8o-dH-Y0F"/>
                         <outlet property="passwordTextField" destination="Znn-uv-3Dw" id="TnZ-YS-Nwo"/>
                         <outlet property="signUpButton" destination="UcV-S7-qCG" id="YOy-o0-Opv"/>
+
+                        <segue destination="CPs-NM-oav" kind="presentation" identifier="mainEntry" modalPresentationStyle="fullScreen" id="EYX-9n-svZ"/>
+
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8yO-WI-JPn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1795,6 +1812,7 @@
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="profilepic1" width="221" height="228"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

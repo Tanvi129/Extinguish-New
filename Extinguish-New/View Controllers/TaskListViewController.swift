@@ -9,8 +9,14 @@ import UIKit
 
 class TaskListViewController: UIViewController , UITableViewDataSource , UITableViewDelegate{
     
-    var taskList = DataModel().getTaskList()
     
+    
+    var taskList = DataModel().getTaskList()
+    var taskListCompleted : [Task] = []
+    var taskListInprogress : [Task] = []
+    var taskListUnassigned : [Task] = []
+    
+    @IBOutlet var segmentedControlTaskList: UISegmentedControl!
     
     @IBOutlet var taskListTable: UITableView!
     
@@ -19,6 +25,10 @@ class TaskListViewController: UIViewController , UITableViewDataSource , UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Task Summary"
+        taskListCompleted = taskList.filter({$0.taskStatus == Status.completed})
+        taskListInprogress = taskList.filter({$0.taskStatus == Status.inProgress})
+        taskListUnassigned = taskList.filter({$0.taskStatus == Status.unassigned})
+
         self.taskListTable.dataSource = self
         self.taskListTable.delegate = self
         configureTitleTabItems()
@@ -36,19 +46,75 @@ class TaskListViewController: UIViewController , UITableViewDataSource , UITable
         1
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return taskList.count
+        var returnValue = 0
+                
+                switch(segmentedControlTaskList.selectedSegmentIndex)
+                {
+                case 0:
+                    returnValue = taskList.count
+                    break
+                case 1:
+                    returnValue = taskListCompleted.count
+                    break
+                    
+                case 2:
+                    returnValue = taskListInprogress.count
+                    break
+                case 3:
+                    returnValue = taskListUnassigned.count
+                    break
+                    
+                default:
+                    break
+                    
+                }
+                
+                return returnValue
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
             let cell = self.taskListTable.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
             let cityCell = cell as? TaskTableViewCell
-            let city = self.taskList[indexPath.section]
-            cityCell?.auditorID.text = city.auditorAssigned?.empID
-            cityCell?.taskID.text = city.taskID
-        cityCell?.status.text = statusText(status: city.taskStatus)
+            switch(segmentedControlTaskList.selectedSegmentIndex)
+                {
+                case 0:
+                    let city = self.taskList[indexPath.section]
+                    cell.backgroundColor = color(status: city.taskStatus)
+                    cityCell?.auditorID.text = city.auditorAssigned?.empID
+                    cityCell?.taskID.text = city.taskID
+                    cityCell?.status.text = statusText(status: city.taskStatus)
+                    break
+                case 1:
+                    let city = self.taskListCompleted[indexPath.section]
+                    cell.backgroundColor = color(status: city.taskStatus)
+                    cityCell?.auditorID.text = city.auditorAssigned?.empID
+                    cityCell?.taskID.text = city.taskID
+                    cityCell?.status.text = statusText(status: city.taskStatus)
+                    break
+                    
+                case 2:
+                    let city = self.taskListInprogress[indexPath.section]
+                    cell.backgroundColor = color(status: city.taskStatus)
+                    cityCell?.auditorID.text = city.auditorAssigned?.empID
+                    cityCell?.taskID.text = city.taskID
+                    cityCell?.status.text = statusText(status: city.taskStatus)
+                    break
+                
+                case 3:
+                    let city = self.taskListUnassigned[indexPath.section]
+                    cell.backgroundColor = color(status: city.taskStatus)
+                    cityCell?.auditorID.text = city.auditorAssigned?.empID
+                    cityCell?.taskID.text = city.taskID
+                    cityCell?.status.text = statusText(status: city.taskStatus)
+                    break
+                    
+                default:
+                    break
+                    
+                }
             
-        cell.backgroundColor = color(status: city.taskStatus)
+            
             cell.layer.borderColor = UIColor.black.cgColor
             
             cell.layer.borderWidth = 1
@@ -113,4 +179,9 @@ class TaskListViewController: UIViewController , UITableViewDataSource , UITable
         
 
     }
+    
+    @IBAction func segmentedControlActionChanged(sender: AnyObject) {
+        
+        taskListTable.reloadData()
+        }
 }
